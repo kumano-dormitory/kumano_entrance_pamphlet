@@ -1,0 +1,25 @@
+
+% 奥付
+% 下寄せ
+\vspace*{\fill} % *をつけるとページ先頭でも入る。
+
+
+\begin{flushleft}
+  % 幅いっぱいにするためにtabular*環境を使用
+  % @{}とするとパディングがなくなる
+  % また、@{...}とすると、セルの区切りに...が入る
+  \begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}}
+      \textbf{\huge 京都大学熊野寮入寮パンフレット2025} \\
+      \hline
+      \begin{tabular}{@{}r@{年\kern.5zw}r@{月\kern.5zw}r@{日\kern1.5zw}ll}
+          2025 &  2 & 25 & 第2版発行 & \\
+      \end{tabular} \\
+      \\
+      \begin{tabular}{@{}l@{\kern.5zw\textbf{:}\kern1zw}l}
+          \textbf{編者} & 京都大学熊野寮自治会 \\
+          \textbf{発行} & 京都大学熊野寮自治会 \\
+          \textbf{印刷} & 京都大学熊野寮 \\
+      \end{tabular} \\
+      \hline
+  \end{tabular*}
+\end{flushleft}

@@ -1,0 +1,107 @@
+%このファイルをコンパイルする。
+
+\documentclass[10pt,a4j,dvipdfmx,openany,uplatex]{jsbook}
+
+\input{preamble.tex}
+
+\title{熊野寮入寮パンフレット2024（入寮募集要項）}
+\author{京都大学熊野寮自治会}
+\date{}
+
+
+\begin{document}
+
+  %\maketitle %%4の倍数にするために挿入したりしなかったりしよう。
+
+  {\small
+  \setcounter{tocdepth}{1}%目次で表示する階層の深さを\sectionまでにする。
+  \tableofcontents
+  }
+
+ 
+\chapter{入寮にあたって}
+
+
+  \input{tsukaimawashi/ryogaiyo.tex}
+
+  \vspace{10mm}
+
+  \input{tsukaimawashi/admission.tex}
+
+  \newpage
+  \input{tsukaimawashi/otoiawase.tex}
+
+
+
+\chapter{寮での生活}
+
+  \input{tsukaimawashi/shokudo.tex}
+
+  \newpage
+
+  \input{tsukaimawashi/MUC.tex}
+
+  \newpage
+
+  \input{tsukaimawashi/harassment.tex}
+
+  \newpage
+  
+  \input{tsukaimawashi/ryosai.tex}
+  
+  \newpage
+  
+  \input{tsukaimawashi/kumanomatsuri.tex}
+
+  
+
+\chapter{寮と大学と自治}
+  \input{tsukaimawashi/jiti.tex}
+  \clearpage
+  \input{tsukaimawashi/kakuyaku.tex}
+  \clearpage
+  \input{tsukaimawashi/tyuboin.tex}
+  \clearpage
+  \input{tsukaimawashi/shobun.tex}
+
+  \newpage
+  \input{tsukaimawashi/gasa_jiti.tex}
+  \input{tsukaimawashi/gasa_kogi.tex}
+
+\chapter{寮生の声}
+  \input{2025shinki/shinya_haikai/main}
+  \newpage
+  \subfile{2025shinki/nuigurumi_zadankai/nuigurumi}
+  \newpage
+  
+  \section{ボドゲの定石を作る 〜WINGSPANを題材にして〜}
+  \input{2025shinki/wing_span/wingspan}
+
+  
+  \newpage
+  \section{出張版 C12 談話室 on web 「とある日のこと」}
+  
+  \input{2025shinki/c12_danwa_one_day/main_text-toaruhinokoto}
+
+  \newpage
+  
+  \input{2025shinki/bear_lexicon_news}
+
+  \newpage
+  \input{2025shinki/konpa_furumai/konpa_furumai.tex}
+
+  \newpage
+  \input{2025shinki/yamano_susume/yamano_susume}
+
+  \newpage
+  \input{2025shinki/joshi_ryosei/joshi_ryosei.tex}
+
+  \newpage
+  \input{tsukaimawashi/memo.tex}
+  
+  \newpage
+  \input{tsukaimawashi/memo.tex}
+
+  \input{tsukaimawashi/okuduke.tex}
+
+\end{document}

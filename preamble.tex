@@ -1,0 +1,162 @@
+\setcounter{secnumdepth}{3}%\subsubsectionのタイトルを表示するときは3にする。
+
+%パッケージ
+
+\usepackage{xcolor}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{picture}%図とか
+\usepackage{ulem}
+\usepackage[labelformat=empty]{subcaption}
+\usepackage{caption}%キャプションの番号消し
+\usepackage{multirow}%複雑な表のために
+%--------------------------------------------------
+\usepackage{xparse}
+\usepackage[utf8]{inputenc}
+\usepackage{otf}%utfの特殊文字を使うのに使用
+\usepackage[top=30truemm, bottom=25truemm, left=20truemm, right=20truemm]{geometry}
+
+\usepackage[stable]{footmisc}%章節などの見出しの中で注を使う
+\usepackage{uline--}%行分割可能な下線、ハイライト。ただし、TeXLive等に入ってはいないので、uline--.styを作業ディレクトリに入れておくこと。
+
+\usepackage{epigraph}
+\setlength{\epigraphwidth}{.6\textwidth}
+%エピグラフを表示するため。タバコの話で使用。
+
+\usepackage{pdfpages}%pdfをそのまま表示するのに使用
+\usepackage{subfiles}%texファイルのpreambleを除いて引用する
+
+\usepackage{amsmath} %%数式。多分使わん。
+\usepackage{amssymb} %%数式で出てくる特殊記号を使いたい人がいるかも
+
+\usepackage{url} %%URLを貼る。texでは$%&@とかの特殊記号を書くのが面倒なので
+\usepackage{float}
+\usepackage{wrapfig} %%この2つは図の配置のため
+%\usepackage{picinpar}%%図の配置。figwindow環境
+\usepackage{floatflt}
+\usepackage{pxrubrica} %%ルビが打てます。
+
+
+\usepackage{multicol} %%複数列の文章
+\setlength{\columnseprule}{0.4pt}%複数列の間に線を引く
+
+\usepackage{afterpage}
+
+%c34
+\interfootnotelinepenalty=10000%注釈の無き別れを防ぐ
+\usepackage{color}           
+\usepackage{okumacro}
+\usepackage{ulem}
+
+\usepackage{fancybox}%itembox, shadebox, あと何かしらの箱
+\usepackage{tcolorbox}%色付きの箱. tcolorboxじゃないとページをまたげないことに注意。
+	\tcbuselibrary{breakable} %これがないとtcolorboxがページをまたげないので
+  \tcbuselibrary{skins}
+\usepackage{ascmac}
+
+
+
+
+%%%%%%%%%%%%%%%%2段組の中で図を使うため
+\makeatletter
+\newenvironment{tablehere}
+  {\def\@captype{table}}
+  {}
+
+\newenvironment{figurehere}
+  {\def\@captype{figure}}
+  {}
+\makeatother
+%%%%% \begin{figure}[h]の代りに、\begin{figurehere}とせよ
+
+
+%%%%%%%%%%%%%%%%%%%章の体裁を変更する。
+ \usepackage[explicit]{titlesec}%題名や章, 節の見出しの体裁を変える
+\titleformat{\chapter}[display]{\bfseries\gtfamily}{}{10pt}{%
+  \begin{tcolorbox}[%
+    enhanced,%
+    colback=white,colbacktitle=white,colframe=black,coltitle=black,%
+    boxrule=1.5pt,sharp corners,%
+    borderline={1.5pt}{3pt}{black},%
+    ]%
+    \centering 第\thechapter 章\\
+    \LARGE #1%
+  \end{tcolorbox}%
+}
+\titlespacing*{\chapter}{1pt}{-20pt}{1pt}[3pt]%章の上の空隙を0にする。
+
+\titleformat{\section}[block]
+  {}
+  {\Large\bfseries\gtfamily #1}
+  {10pt}
+  {\titleline[l]{\titlerule*[5pt]{\tiny\textbullet}}\vspace{-20pt}}
+
+\titleformat{\subsection}[block]{}
+  {\large\bfseries\gtfamily ○#1}{10pt}{}
+  {\vspace{-20pt}}
+
+\titleformat{\subsubsection}[block]{}
+  {〜{\bfseries\gtfamily#1}〜}{10pt}{}
+  {}
+
+
+\newcommand{\subsecdefault}{\input{subsecdefault.tex}}
+\newcommand{\subsecnomaru}{\input{subsecmarunasi.tex}}
+%\subsectionの仕様を変更する。\subsecnomaruで◯をなくす。\subsecdefaultで元に戻す。
+\newcommand{\sectionnotitle}{\input{sectionnotitle.tex}}
+\newcommand{\sectiondefault}{\input{sectiondefault.tex}}
+
+%%マクロ
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\singo}[1]{{\textgt{#1}}}%全体。新語に。
+\newcommand{\komoku}[1]{\noindent{\textbf{〈#1〉}}}%募集要項で使用。
+\newcommand{\kkomoku}[1]{\vspace{3mm}\noindent{\textbf{《#1》}}}%項目2。女子寮生窓口で使用。
+\newcommand{\kkkomoku}[2]{\vspace{1mm}\noindent \textbf{#1　#2}\\}%項目3。C12座談会の部屋紹介で使用。
+
+
+\newcommand{\tatespace}{\vspace{1cm}}
+\newcommand{\emphbf}[1]{\textgt{#1}}%強調として太字を使用している箇所
+\newcommand{\bunsekisha}[2]{\vspace{-2mm}\rightline{{\small（#1：#2）}}}%文責について\bunsekisha{文責}{奥山田}で（文責：奥山田）が小さく右寄で表示。「文責」の箇所は「編集」とか「文字起こし」とかにすればいいかな。
+
+%%%%%%%%%%%%%%%座談会関係のマクロ
+\newcommand{\jinbutu}[1]{\vspace{2mm}\noindent #1\\}%座談会の人物紹介。C12座談会で使用した形式
+\newcommand{\situmon}{\item[---------]}%インタビュー形式のもので、インタビュアーに使う。
+\newcommand{\togaki}[1]{\vspace{1mm} \quad #1 \vspace{1mm}}%ト書き
+\newcommand{\hang}[1]{\settowidth{\hangindent}{#1} #1}%1回生座談会人物紹介で使用。
+\newcommand{\talker}[1]{\noindent{\gtfamily\bfseries #1}：}%座談会で喋っている人を示す命令。想定している書式は
+%\talker{人}喋ったこと＜改行×2＞
+%\talker{次の話者}喋ったこと
+\newcommand{\talkerb}[1]{{\gtfamily\bfseries #1}：}%行頭以外で使いたい時
+\newcommand{\talkpare}[1]{\noindent （#1）}%座談会中の（から始まる段落に使用。カッコの後ろのコメントアウト
+
+%%%%%%%%%%%%%%\zenkakuspace{n}でn個の全角空白を出力する。wrapfigureの位置調整に必要。
+\newcount\kaisu
+\def\zenkakuspace#1{
+  \kaisu = 0 \loop\ifnum\kaisu<#1
+  　
+  \advance\kaisu by1\repeat
+}
+
+
+
+
+\newcommand{\hanten}[1]{\uline[background,color=black,width=1zw,position=.38zw]{\color{white}{\textbf{#1}}}}
+%文字の白黒反転する。kyoto scienceの記事をに使用。\ctextはsoulパッケージで使えるようになる
+
+\def\sshatai#1{\makebox[2.25zw][l]{\vphantom{#1}\rotatebox{-48.8}{\scalebox{0.875}[1.143]{\rotatebox{41.2}{\smash{\rlap{#1}}}}}}} %和文斜体を行うためのマクロ。改行に対応できない。
+
+\newcounter{footnote1}%これらは、minipageの中で脚注をつけるために（結構めんどうなことをしています。）1day.texにて
+\newcounter{footnote2}
+
+%%%%%%%%%索引の設定
+\usepackage{makeidx}
+%\usepackage[columns=3,font=footnotesize]{idxlayout}%改頁しない
+\usepackage[override=false]{seealso}%|seealsopage{aaaa}でをも見よ参照
+\makeindex%idxファイルを作れという命令
+\seealsosetup[also]{nameformat=#1}
+\def\seename{}
+\def\alsoname{\\ \quad $\rightarrow$}
+% \def\alsosee#1#2{
+%   #2\n
+%   $\longrightarrow$#1
+% }
+%「を見よ参照」を二重矢印、「をも見よ参照」を矢印に。

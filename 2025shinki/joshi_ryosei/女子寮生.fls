@@ -1,0 +1,6 @@
+PWD /Users/t_kogo/Downloads/熊野寮入寮パンフレット2024（入寮募集要項）/2025shinki/joshi_ryosei
+INPUT /usr/local/texlive/2024/texmf.cnf
+INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
+INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/latex.fmt
+INPUT /Users/t_kogo/Downloads/熊野寮入寮パンフレット2024（入寮募集要項）/2025shinki/joshi_ryosei/女子寮生.tex
+OUTPUT /Users/t_kogo/Downloads/熊野寮入寮パンフレット2024（入寮募集要項）/2025shinki/joshi_ryosei/女子寮生.log

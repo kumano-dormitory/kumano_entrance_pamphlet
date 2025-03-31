@@ -1,0 +1,34 @@
+節タイトル ラベル名 一覧
+
+入寮募集要項 sec:admission
+C12新入寮生座談会 sec:C12
+コミケ　sec:comiket
+同学会　sec:dogakkai
+エフェクター紹介 sec:effector
+学術連帯 sec:gakujutu
+処分問題 sec:shobun
+熊野寮概要 sec:abst
+ガサにまつわる立場 sec:gasa_jiti
+ガサについて抗議すべき sec:gasa_kogi
+ガサ体験記　sec:gasataiken
+議論改善PT sec:gironkaizen
+ハラスメント sec:harassment
+一言　sec:kanadawasi
+一回生座談会　sec:ikkaisei
+自治とはなにか sec:jiti
+女子寮生座談会 sec:josiryose
+大学当局との確約団交 sec:kakuyaku
+くまのまつり sec:kumanomaturi
+くまのせいかつ sec:kumanoseikatu
+音楽室 sec:MUC
+マイ・フェイバリットブックス sec:favorite_books
+自治とは人間讃歌である sec:ningensanka
+古本屋・図書館・博物館 sec:huruhonya
+お問い合わせ sec:otoiawase
+寮祭 sec:ryosai
+寮食堂 sec:cafeteria
+ある日の食北での会話 sec:shokuhoku
+すきあらばけいおん sec:suki_kon
+たばこのはなし　sec:tabako
+燕の火の用心 sec:tubame
+厨房院問題　sec:tyuboin
