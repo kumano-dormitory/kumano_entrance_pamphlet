@@ -1,7 +1,0 @@
-PWD /Users/t_kogo/KumanoITSection/kumano_entrance_pamphlet
-INPUT /usr/local/texlive/2024/texmf.cnf
-INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
-INPUT /usr/local/texlive/2024/texmf.cnf
-INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
-INPUT /usr/local/texlive/2024/texmf-var/web2c/euptex/uplatex.fmt
-OUTPUT texput.log

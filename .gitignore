@@ -1,0 +1,46 @@
+# LaTeX 補助・一時ファイル
+*.aux
+*.log
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.synctex
+*.dvi
+*.idx
+*.ilg
+*.ind
+*.toc
+*.lof
+*.lot
+*.out
+*.nav
+*.snm
+*.vrb
+*.bbl
+*.blg
+texput.*
+
+# LaTeX ビルド出力（必要ならコメントアウト）
+# main.pdf
+# main_short.pdf
+
+# アーカイブ（配布用に生成したzipなど）
+*.zip
+
+# OS 固有の一時ファイル
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# エディタ・IDE のバックアップ
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# VSCode（個人設定を共有しない場合）
+# .vscode/
